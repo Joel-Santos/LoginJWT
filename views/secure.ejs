@@ -1,0 +1,18 @@
+<!-- views/secure.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Area</title>
+</head>
+<body>
+    <h1>Secure Area</h1>
+    <% if (username) { %>
+        <p>Welcome, <%= username %>! This is a secure area.</p>
+        <a href="/user/logout">Logout</a>
+    <% } else { %>
+        <p>You are not authorized to access this area. Please <a href="/user/login">login</a>.</p>
+    <% } %>
+</body>
+</html>
